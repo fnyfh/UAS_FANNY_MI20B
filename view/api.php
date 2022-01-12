@@ -12,13 +12,14 @@
 		case 'GET':
 			$ctrl->getJenisData();
 			break;
-			case 'POST';
 
+			case 'POST';
 			$ctrl->simpanJurusan();
 			break;
 
 			case 'PUT';
 			break;
+			
 			case 'DELETE';
 			break;
 		

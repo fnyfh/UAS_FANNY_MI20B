@@ -17,7 +17,6 @@ class Auth {
 		if (isset($_POST['login'])) {
 			session_start();
 			if ($_POST["code"] != $_SESSION["code"] OR $_SESSION["code"]=='') {
-				// code...
 			}else{
 				$user = strip_tags($_POST['user']);
         	$pass = strip_tags($_POST['pass']);

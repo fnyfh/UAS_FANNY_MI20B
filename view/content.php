@@ -72,7 +72,7 @@ $hasil = $ctrl->index();
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <?php
-    } else  if ($pesan == 'failed' && $frm == 'login') {
+    }else if (isset($_GET['pesan']) == 'failed' && isset($_GET['frm']) == 'login') {
     ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Can't Login!</strong> Username atau Password salah!.
@@ -81,6 +81,9 @@ $hasil = $ctrl->index();
     <?php
     }
     ?>
+    <div align="left">
+      <a href="#" class="btn btn-outline-primary action-button" role="button" data-bs-toggle="modal" data-bs-target="#logout"><i class="bi bi-box-arrow-left"></i></a>
+    </div>
     <br>
     <h1 align="center">DATA ANGGOTA
       <!-- LP3I COMPUTER CLUB 2021/2022 -->
@@ -147,10 +150,6 @@ $hasil = $ctrl->index();
         ?>
       </tbody>
     </table>
-    <div class="col-md-4">
-      
-      <a href="#" class="btn btn-outline-primary action-button" role="button" data-bs-toggle="modal" data-bs-target="#logout"><i class="bi bi-box-arrow-left"></i> Log Out</a>
-    </div>
   </div>
 </body>
 

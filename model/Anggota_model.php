@@ -20,7 +20,7 @@ class Anggota_model{
 	function getJenisData(){
 		$row = $this->db->prepare("SELECT * FROM tbl_jurusan");
 		$row->execute();
-		return $hasil = $row->fetchAll();
+		return $hasilJur = $row->fetchAll();
 	}
 	function getJenisData2(){
 		$row = $this->db->prepare("SELECT * FROM tbl_jabatan");
@@ -93,6 +93,11 @@ class Anggota_model{
 	}
 	function hapusData($id){
 		$sql = "DELETE FROM tbl_anggota WHERE id = ?";
+		$row = $this->db->prepare($sql);
+		return $row ->execute(array($id));
+	}
+	function hapusDataJur($id){
+		$sql = "DELETE FROM tbl_jurusan WHERE id = ?";
 		$row = $this->db->prepare($sql);
 		return $row ->execute(array($id));
 	}

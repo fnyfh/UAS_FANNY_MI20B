@@ -21,6 +21,7 @@ $ctrl = new Auth();
 </head>
 
 <body>
+
     <div class="kotak">
         <?php 
         if(isset($_GET['pesan'])){
@@ -41,7 +42,7 @@ $ctrl = new Auth();
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             <?php
-            } 
+            }
             ?>
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
