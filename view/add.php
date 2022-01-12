@@ -44,9 +44,10 @@ $query3 = $ctrl->getJenisData2($id);
             var html = '';
             var i;
             var no;
+            html = '<option value="">Masukan Pilihan</option>';
             for (i=0; i<data.length; i++){
               no = i + 1;
-              html +=
+              html += 
                 '<option value="'+data[i].jurusan+'">'+data[i].jurusan+'</option>';
             }
             $('#jurusan').html(html);
