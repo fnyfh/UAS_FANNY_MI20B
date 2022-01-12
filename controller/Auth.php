@@ -17,6 +17,7 @@ class Auth {
 		if (isset($_POST['login'])) {
 			session_start();
 			if ($_POST["code"] != $_SESSION["code"] OR $_SESSION["code"]=='') {
+				header("Location:index.php?pesan=failed&&frm=captcha");
 			}else{
 				$user = strip_tags($_POST['user']);
         	$pass = strip_tags($_POST['pass']);
