@@ -41,6 +41,13 @@ $ctrl = new Auth();
                 <strong>Selamat!</strong> Anda Berhasil Logout.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
+              <?php
+            } else if (isset($_GET['pesan']) == 'failed' && isset($_GET['frm']) == 'captcha') {
+            ?>
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <strong>Maaf!</strong> Captcha Salah.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
             <?php
             }
             ?>
