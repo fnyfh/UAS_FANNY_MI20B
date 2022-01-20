@@ -20,7 +20,7 @@ class Anggota_model{
 	function getJenisData(){
 		$row = $this->db->prepare("SELECT * FROM tbl_jurusan");
 		$row->execute();
-		return $hasilJur = $row->fetchAll();
+		return $hasil = $row->fetchAll();
 	}
 	function getJenisData2(){
 		$row = $this->db->prepare("SELECT * FROM tbl_jabatan");

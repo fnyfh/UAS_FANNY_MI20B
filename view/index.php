@@ -1,7 +1,7 @@
 <?php
 
 include '../controller/Auth.php';
-
+error_reporting(0);
 $ctrl = new Auth();
 ?>
 <!DOCTYPE html>
@@ -35,17 +35,24 @@ $ctrl = new Auth();
     <section class="login-dark" style="background: url(&quot;assets/img/blue-galaxy-23.jpg&quot;);">
         <form method="post" action="<?php echo $ctrl->login();?>">
             <?php
-            if (isset($_GET['pesan']) == 'success' && isset($_GET['frm']) == 'logout') {
+            if ($_GET["pesan"] == 'success' && $_GET["frm"] == 'logout') {
             ?>
               <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 <strong>Selamat!</strong> Anda Berhasil Logout.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
               <?php
-            } else if (isset($_GET['pesan']) == 'failed' && isset($_GET['frm']) == 'captcha') {
+            } else if ($_GET["pesan"] == 'failed' && $_GET["frm"] == 'captcha') {
             ?>
-                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>Maaf!</strong> Captcha Salah.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <?php
+            } else if ($_GET["pesan"] == 'failed' && $_GET["frm"] == 'login') {
+            ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Maaf!</strong> Username dan password salah.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             <?php

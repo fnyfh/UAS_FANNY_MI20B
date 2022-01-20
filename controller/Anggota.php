@@ -34,6 +34,10 @@ class Anggota {
 		$hasil = $this->model->getJenisData2();
 	return $hasil;
 	}
+	function getJenisData3(){
+		$hasil = $this->model->getJenisData();
+	return $hasil;
+	}
 	function hapusData(){
 		if (isset($_POST['delete'])) {
 			$id = $_POST['id'];

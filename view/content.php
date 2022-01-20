@@ -72,10 +72,10 @@ $hasil = $ctrl->index();
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <?php
-    }else if (isset($_GET['pesan']) == 'failed' && isset($_GET['frm']) == 'login') {
+    }else if ($pesan == 'failed' && $frm == 'captcha') {
     ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Can't Login!</strong> Username atau Password salah!.
+        <strong>Captcha salah!</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <?php
@@ -96,12 +96,12 @@ $hasil = $ctrl->index();
     <table class="table table-bordered table-hover">
       <thead class="table-dark text-center">
         <tr>
-          <td>NIM</td>
-          <td>Nama Lengkap</td>
-          <td>NO HP</td>
-          <td>Alamat</td>
-          <td>Jurusan</td>
-          <td colspan="2">Jabatan</td>
+          <th>NIM</th>
+          <th>Nama Lengkap</th>
+          <th>NO HP</th>
+          <th>Alamat</th>
+          <th>Jurusan</th>
+          <th colspan="2">Jabatan</th>
         </tr>
       </thead>
 

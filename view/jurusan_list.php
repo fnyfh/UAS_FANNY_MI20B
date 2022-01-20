@@ -1,9 +1,10 @@
 <?php
 include '../controller/Anggota.php';
 error_reporting(0);
+$ctrl = new Anggota();
+$hasil = $ctrl->getJenisData3();
 // var_dump($hasil);
-$ctrl = new getJenisData();
-$hasilJur = $ctrl->index();
+// die;
 ?>
  
 <!DOCTYPE html>
@@ -49,14 +50,15 @@ $hasilJur = $ctrl->index();
     <table class="table table-bordered table-hover">
       <thead class="table-dark text-center">
         <tr>
-          <td>NO</td>
-          <td colspan="2">Jurusan</td>
+          <th>ID Jurusan</th>
+          <th colspan="2">Jurusan</th>
         </tr>
       </thead>
 
       <tbody>
+      <?php foreach ($hasil as $dataJur) { ?>
           <tr>
-            <td><?= $dataJur["id"]; ?></td>
+            <td align="center"><?= $dataJur["id"]; ?></td>
             <td><?= $dataJur["jurusan"]; ?></td>
             <td align="center">
               <a href="edit.php?id=<?php echo $dataJur['id']; ?>" class="btn btn-outline-warning" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -67,7 +69,7 @@ $hasilJur = $ctrl->index();
             <div id="deletedata<?php echo $dataJur['id'] ?>" class="modal fade" role="dialog" style="display: none;">
               <div class="modal-dialog"> 
                 <div class="modal-content">
-                  <form class="row g-3" method="post" action="<?php $ctrl->hapusDataJur() ?>" name="form1">
+                  <form class="row g-3" method="post" action="" name="form1">
                     <div class="modal-header">
                       <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times</span></button>
                       <h3 class="modal-title">Konfirmasi Hapus Data</h3>
