@@ -61,7 +61,7 @@ $hasil = $ctrl->getJenisData3();
             <td align="center"><?= $dataJur["id"]; ?></td>
             <td><?= $dataJur["jurusan"]; ?></td>
             <td align="center">
-              <a href="edit.php?id=<?php echo $dataJur['id']; ?>" class="btn btn-outline-warning" title="Edit"><i class="bi bi-pencil-square"></i></a>
+              <a href="#" class="btn btn-outline-warning" title="Edit"><i class="bi bi-pencil-square"></i></a>
               <a href="#" data-bs-toggle="modal" data-bs-target="#deletedata<?php echo $dataJur['id']; ?>" class="btn btn-outline-secondary" title="Hapus"><i class="bi bi-trash"></i></a>
             </td>
           </tr>

@@ -40,8 +40,7 @@ $query3 = $ctrl->getJenisData2($id);
             var html = '';
             var i;
             var no;
-            html =
-                '<option value="'+<?php echo $isiAnggota['jurusan'] ?>+'">'+<?php echo $isiAnggota['jurusan'] ?>+'</option>';
+            html += '<option value="<?= $isiAnggota['jurusan'] ?>"><?= $isiAnggota['jurusan'] ?></option>';
             for (i=0; i<data.length; i++){
               no = i + 1;
               html +=
