@@ -50,7 +50,7 @@ $hasil = $ctrl->getJenisData3();
     <table class="table table-bordered table-hover">
       <thead class="table-dark text-center">
         <tr>
-          <th>ID Jurusan</th>
+          <th>ID</th>
           <th colspan="2">Jurusan</th>
         </tr>
       </thead>

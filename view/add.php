@@ -133,15 +133,15 @@ $query3 = $ctrl->getJenisData2($id);
               <input type="text" class="form-control" id="alamat" name="alamat" required>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
               <label for="jurusan" class="form-label">Jurusan</label>
               <select id="jurusan" class="form-select" name="jurusan" required>
                 <option selected>Masukan Pilihan</option>
               </select>
             </div>
-            <div class="col-md-1 pt-2">
-
+            <div class="col-md-2 pt-2">
               <a href="#" class="btn btn-outline-warning mt-4" data-bs-toggle="modal" data-bs-target="#modalData" ><i class="bi bi-plus"></i></a>
+              <a href="jurusan_list.php" class="btn btn-outline-primary mt-4" name="jurusanlist">List Jurusan</a>
             </div>
             <div class="col-md-6">
               <label for="jabatan" class="form-label">Jabatan</label>
